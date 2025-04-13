@@ -35,9 +35,10 @@ ENV/
 .ipynb_checkpoints
 
 # DVC
-/data
+/data/*
+!/data/*.dvc
 /models
-.dvc/
+.dvc/cache/
 
 # MLflow
 mlruns/
