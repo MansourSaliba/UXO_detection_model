@@ -19,8 +19,20 @@ This project implements a deep learning solution for detecting and classifying U
 
 ## Data Access
 
-The project data is stored in Google Drive. To access the data:
+The project data is stored in Google Drive and managed using DVC. You can access the data in two ways:
 
+### Option 1: Using DVC (Recommended)
+1. Install DVC with Google Drive support:
+```bash
+pip install dvc[gdrive]
+```
+
+2. Pull the data using DVC:
+```bash
+dvc pull
+```
+
+### Option 2: Manual Download
 1. Go to the project's Google Drive folder: [UXO Detection Data](https://drive.google.com/drive/folders/1hJ3EIXnIOz1mGEJpJZVoyiKcS3h6Qlvj)
 2. Download the following folders:
    - `raw/`: Original dataset
@@ -64,21 +76,23 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 3. Install dependencies:
 ```bash
 pip install -r requirements.txt
+pip install dvc[gdrive]  # Install DVC with Google Drive support
 ```
 
-4. Initialize DVC:
+4. Initialize DVC (if not already initialized):
 ```bash
 dvc init
 ```
 
-5. Configure DVC remote:
+5. Configure DVC remote (if not already configured):
 ```bash
 dvc remote add -d gdrive gdrive://1hJ3EIXnIOz1mGEJpJZVoyiKcS3h6Qlvj
 ```
 
 6. Download the data:
-   - Manually download from Google Drive (see Data Access section)
-   - Place the data in the corresponding directories under `data/`
+```bash
+dvc pull
+```
 
 ## Data Versioning
 
