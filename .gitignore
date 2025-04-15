@@ -48,4 +48,7 @@ mlruns/
 
 # Local development settings
 .env
-.env.local 
+.env.local
+
+# Google Drive credentials
+.gdrive/ 
