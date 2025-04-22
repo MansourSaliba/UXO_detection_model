@@ -1,0 +1,15 @@
+artifact_uri: file:///content/gdrive/MyDrive/UXO_project/mlruns/499144219443126180/9c3a53ee6346468ea4cd84e3f964d672/artifacts
+end_time: 1745015823082
+entry_point_name: ''
+experiment_id: '499144219443126180'
+lifecycle_stage: active
+run_id: 9c3a53ee6346468ea4cd84e3f964d672
+run_name: yolov8_training
+run_uuid: 9c3a53ee6346468ea4cd84e3f964d672
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745012211859
+status: 3
+tags: []
+user_id: root

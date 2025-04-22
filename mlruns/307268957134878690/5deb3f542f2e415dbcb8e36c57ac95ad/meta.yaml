@@ -1,0 +1,15 @@
+artifact_uri: /content/drive/MyDrive/UXO_project/mlruns/307268957134878690/5deb3f542f2e415dbcb8e36c57ac95ad/artifacts
+end_time: 1745057456682
+entry_point_name: ''
+experiment_id: '307268957134878690'
+lifecycle_stage: active
+run_id: 5deb3f542f2e415dbcb8e36c57ac95ad
+run_name: likeable-snail-434
+run_uuid: 5deb3f542f2e415dbcb8e36c57ac95ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745053057674
+status: 4
+tags: []
+user_id: root

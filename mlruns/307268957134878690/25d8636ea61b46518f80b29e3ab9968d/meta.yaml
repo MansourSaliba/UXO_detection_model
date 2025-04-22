@@ -1,0 +1,15 @@
+artifact_uri: /content/drive/MyDrive/UXO_project/mlruns/307268957134878690/25d8636ea61b46518f80b29e3ab9968d/artifacts
+end_time: 1745051287361
+entry_point_name: ''
+experiment_id: '307268957134878690'
+lifecycle_stage: active
+run_id: 25d8636ea61b46518f80b29e3ab9968d
+run_name: thundering-worm-887
+run_uuid: 25d8636ea61b46518f80b29e3ab9968d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745023067926
+status: 3
+tags: []
+user_id: root

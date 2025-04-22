@@ -1,21 +1,34 @@
-# UXO Detection System
+# Underwater UXO Classification and Detection System
 
-A machine learning-based system for detecting and classifying Unexploded Ordnance (UXO) using computer vision techniques.
+A machine learning-based system for detecting and classifying Unexploded Ordnance (UXO). All project details can be accessed on Google Drive following (https://drive.google.com/drive/folders/1-OtviFB_2QhGz4JM7WutXUYMTrTTQ-DH?usp=drive_link)
+
 
 ## Project Overview
 
-This project implements a deep learning solution for detecting and classifying UXO in images. The system uses state-of-the-art object detection models (YOLOv8/Faster R-CNN) to identify and classify different types of UXO with high accuracy and real-time processing capabilities.
+This project implements a complete pipeline for UXO detection and classification, combining:
+- RESNET18 for accurate classification of sonar data
+- YOLOv8n for precise detection of imsge data with bounding boxes
+- Flask API for model serving
+- Streamlit for user interface
+- Docker for containerized deployment 
 
-## Features
+UXO_detection_model/
+├── data/               # Dataset and data processing scripts
+│   ├── raw/           # Original dataset
+│   ├── interim/       # Intermediate processed data
+│   └── processed/     # Final processed data
+├── models/            # Trained models
+│   ├── classification/ # RESNET18 model
+│   └── detection/     # YOLOv8n model
+├── src/data_processing   
+├── Deployment/  
+│   ├── uxo_classifier_api/  # Classifier API
+│   ├── uxo_detection_api/          # Detector ig           
+│   └── uxo_ui/     # YOLOv8n model
+├── notebooks/        # Jupyter notebooks for analysis
+├── docs/            # Documentation
 
-- Multi-class UXO detection
-- Real-time processing and visualization
-- Confidence scoring
-- Interactive web interface
-- Model performance tracking with MLflow
-- Data versioning with DVC
-- RESTful API with FastAPI
-- Docker containerization
+```
 
 ## Data Access
 
@@ -39,32 +52,13 @@ dvc pull
    - `interim/`: Intermediate processed data
    - `processed/`: Final processed data ready for model training
 
-## Project Structure
-
-```
-uxo-detection/
-├── data/               # Dataset and data processing scripts
-│   ├── raw/           # Original dataset
-│   ├── interim/       # Intermediate processed data
-│   └── processed/     # Final processed data
-├── models/            # Trained models and model definitions
-├── src/               # Source code
-│   ├── api/          # FastAPI backend
-│   ├── frontend/     # React/Streamlit frontend
-│   ├── ml/           # ML training and inference code
-│   └── utils/        # Utility functions
-├── tests/            # Test suite
-├── notebooks/        # Jupyter notebooks for analysis
-├── docs/            # Documentation
-└── docker/          # Docker configuration
-```
 
 ## Setup Instructions
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd uxo-detection
+git clone https://github.com/MansourSaliba/UXO_detection_model.git
+cd UXO_detection_model
 ```
 
 2. Create and activate virtual environment:
@@ -109,18 +103,37 @@ git add data/*.dvc
 git commit -m "Update data tracking"
 ```
 
-## Usage
+### Running the System
 
-[To be added after implementation]
+#### Local Development
 
-## Contributing
+1. Start the Flask API:
+```bash
+cd Deployment/uxo_classifier_api
+python app.py
+```
+```bash
+cd Deployment/uxo_detection_api
+python app.py
+```
 
-[To be added]
+2. Start the Streamlit UI:
+```bash
+cd Deployment/uxo_ui
+streamlit run app.py
+```
 
-## License
+#### Docker Deployment
 
-[To be added]
+1. Start the system using Docker Compose:
+```bash
+docker-compose up --build
+```
 
-## Contact
+This will start both the APIs and UI services. The system will be available at:
+- UI: http://localhost:8501
 
-[To be added] 
+To stop the services:
+```bash
+docker-compose down
+```
