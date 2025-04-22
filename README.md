@@ -12,8 +12,11 @@ This project implements a complete pipeline for UXO detection and classification
 - Streamlit for user interface
 - Docker for containerized deployment 
 
+## Project Structure 
+
+```
 UXO_detection_model/
-├── data/               # Dataset and data processing scripts
+├── data/              # Dataset and data processing scripts
 │   ├── raw/           # Original dataset
 │   ├── interim/       # Intermediate processed data
 │   └── processed/     # Final processed data
@@ -26,7 +29,7 @@ UXO_detection_model/
 │   ├── uxo_detection_api/          # Detector ig           
 │   └── uxo_ui/     # YOLOv8n model
 ├── notebooks/        # Jupyter notebooks for analysis
-├── docs/            # Documentation
+└── docs/            # Documentation
 
 ```
 
