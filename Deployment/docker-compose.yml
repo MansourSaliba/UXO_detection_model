@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  ui:
+    build: ./uxo_ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - classifier
+      - detector
+    environment:
+      - CLASSIFIER_API=http://classifier:5000/classify
+      - DETECTOR_API=http://detector:8000/detect
+    networks:
+      - uxo-network
+
+  classifier:
+    build: ./uxo_classifier_api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./uxo_classifier_api/resnet18_uxo.pt:/app/resnet18_uxo.pt
+    networks:
+      - uxo-network
+
+  detector:
+    build: ./uxo_detection_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uxo_detection_api/YOLO_uxo.pt:/app/YOLO_uxo.pt
+    networks:
+      - uxo-network
+
+networks:
+  uxo-network:
+    driver: bridge 
