@@ -1,6 +1,6 @@
 # Underwater UXO Classification and Detection System
 
-A machine learning-based system for detecting and classifying Unexploded Ordnance (UXO). All project details can be accessed on Google Drive following (https://drive.google.com/drive/folders/1-OtviFB_2QhGz4JM7WutXUYMTrTTQ-DH?usp=drive_link)
+A machine learning-based system for detecting and classifying Unexploded Ordnances (UXOs) underwater by utilizing both sonar and image data. All project details can be accessed on Google Drive following this [link](https://drive.google.com/drive/folders/1-OtviFB_2QhGz4JM7WutXUYMTrTTQ-DH?usp=drive_link).
 
 
 ## Project Overview
