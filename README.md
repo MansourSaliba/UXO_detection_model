@@ -23,12 +23,12 @@ UXO_detection_model/
 ├── models/            # Trained models
 │   ├── classification/ # RESNET18 model
 │   └── detection/     # YOLOv8n model
-├── src/data_processing   
+├── src/data_processing   # Data processing scripts
 ├── Deployment/  
 │   ├── uxo_classifier_api/  # Classifier API
-│   ├── uxo_detection_api/          # Detector ig           
-│   └── uxo_ui/     # YOLOv8n model
-├── notebooks/        # Jupyter notebooks for analysis
+│   ├── uxo_detection_api/   # Detector API           
+│   └── uxo_ui/        # UI API
+├── notebooks/        # Jupyter notebooks for training
 └── docs/            # Documentation
 
 ```
